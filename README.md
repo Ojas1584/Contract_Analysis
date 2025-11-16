@@ -140,7 +140,11 @@ The final  pipeline (contractsAnalysis.py) was developed after multiple iteratio
 
 ```bash
 # For a fresh start (recommended for first run)
-rm -rf output/  # Remove any existing output folder
+# On Windows PowerShell:
+Remove-Item -Recurse -Force output
+
+# On macOS/Linux:
+# rm -rf output/
 
 # Run the pipeline
 python contractsAnalysis.py
@@ -360,13 +364,7 @@ This agreement outlines the partnership between i-Escrow and 2TheMart, with the 
 
 **Termination Clause:**
 ```
-8.1 TERM. The term of this Agreement shall continue for one (1) year following the Launch Date, unless earlier terminated as provided herein. This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement. A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect. In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year.
-
-8.2 TERMINATION FOR BREACH. In addition to other remedies that may be available to it, by providing written notice, a party may immediately terminate this Agreement: (a) if the other party materially breaches this Agreement and fails to cure that breach within sixty (60) days after receiving written notice of the breach, or (b) as provided in Sections 2.2 [INITIAL INFORMATION TRANSFER MECHANISM DEVELOPMENT] , 2.4 [RESTRICTIONS ON COMMUNICATIONS] , or 12.4.
-
-8.3 TERMINATION FOR CHANGE IN COMPANY STRUCTURE. If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. (except that i-Escrow may sell all or a majority of its equity securities or voting interests to i-Escrow.com, and i-Escrow.com may sell all or a majority of its equity securities or voting interests to i-Escrow's existing shareholders, without triggering the foregoing) are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party.
-
-8.4 TERMINATION FOR BANKRUPTCY. Either party may terminate or suspend this Agreement effective immediately and without liability upon written notice to the other party if any one of the following events occurs: (a) the other party files a voluntary petition in bankruptcy or otherwise seeks protection under any law for the relief of debtors; (b) the other party has an involuntary petition in bankruptcy filed against it which is not dismissed within sixty (60) days after filing; or (c) the other party becomes insolvent.
+8.1 TERM. The term of this Agreement shall continue for one (1) year following the Launch Date, unless earlier terminated as provided herein. This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement. A party wishing to renew this Agreement shall give the other party notice thereof ...
 ```
 **Confidentiality Clause:**
 ```
@@ -374,102 +372,13 @@ This agreement outlines the partnership between i-Escrow and 2TheMart, with the 
 
 9.1 DEFINITIONS.
 
-For purposes of this Section 9, "Confidential Information" means all confidential and proprietary information disclosed by one party to the other party under this Agreement, including without limitation trade secrets, know-how, business practices, technical data, product plans, designs, specifications, source code, object code, software, documentation, user manuals, marketing materials, financial information, customer lists, supplier lists, pricing information, and any other proprietary or confidential information.
-
-9.2 OBLIGATIONS OF RECEIVING PARTY.
-
-The receiving party shall:
-
-(a) use the Confidential Information solely for the purpose of performing its obligations under this Agreement;
-
-(b) not disclose the Confidential Information to any third party without the prior written consent of the disclosing party;
-
-(c) not use the Confidential Information for any purpose other than as permitted in Section 9.2(a);
-
-(d) protect the Confidential Information with at least the same degree of care that it uses to protect its own confidential and proprietary information, but in no event less than reasonable care.
-
-9.3 PROHIBITED DISCLOSURES.
-
-The receiving party shall not disclose any Confidential Information to:
-
-(a) any employee or agent who does not have a need-to-know;
-
-(b) any third party without the prior written consent of the disclosing party;
-
-(c) any government agency, regulatory body, or other authority without the prior written consent of the disclosing party.
-
-9.4 PROHIBITED USES.
-
-The receiving party shall not use the Confidential Information for:
-
-(a) any purpose other than as permitted in Section 9.2(a);
-
-(b) competing with the disclosing party;
-
-(c) developing a similar product or service.
-
-9.5 RETURN OF CONFIDENTIAL INFORMATION.
-
-Upon request of the disclosing party, the receiving party shall promptly return all Confidential Information to the disclosing party.
-
-9.6 REMEDIES.
-
-The disclosing party may seek injunctive relief and/or monetary damages for any breach of this Section 9.
-
-9.7 SURVIVAL.
-
-This Section 9 shall survive termination or expiration of this Agreement.
-
-9.8 GOVERNING LAW.
-
-This Section 9 shall be governed by and construed in accordance with the laws of the State of [STATE].
-
-9.9 DISPUTE RESOLUTION.
-
-Any disputes arising out of or related to this Section 9 shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.
-
-9.10 NOTICES.
-
-All notices required or permitted under this Section 9 shall be in writing and delivered personally, by certified mail, or by overnight delivery service.
+For purposes of this Section 9, "Confidential Information" means all confidential and proprietary information disclosed by one party to the other party under this Agreement, including without limitation trade secrets, know-how, business practices, technical data, product plans, designs, specifications, source code, object code, soft...
 ```
 **Liability Clause:**
 ```
 7. DISCLAIMER OF WARRANTIES.
 
-EACH PARTY PROVIDES ALL MATERIALS AND SERVICES TO THE OTHER PARTY "AS IS." EACH PARTY DISCLAIMS ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Each party acknowledges that it has not entered into this Agreement in reliance upon any warranty or representation except those specifically set forth herein.
-
-8. TERM AND TERMINATION.
-
-8.1 TERM. The term of this Agreement shall continue for one (1) year following the Launch Date, unless earlier terminated as provided herein. This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement. A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect. In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year.
-
-8.2 TERMINATION FOR BREACH. In addition to other remedies that may be available to it, by providing written notice, a party may immediately terminate this Agreement: (a) if the other party materially breaches this Agreement and fails to cure that breach within sixty (60) days after receiving written notice of the breach, or (b) as provided in Sections 2.2 [INITIAL INFORMATION TRANSFER MECHANISM DEVELOPMENT] , 2.4 [RESTRICTIONS ON COMMUNICATIONS] , or 12.4.
-
-8.3 TERMINATION FOR CHANGE IN COMPANY STRUCTURE. If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. (except that i-Escrow may sell all or a majority of its equity securities or voting interests to i-Escrow.com, and i-Escrow.com may sell all or a majority of its equity securities or voting interests to i-Escrow's existing shareholders, without triggering the foregoing) are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party.
-
-8.4 TERMINATION FOR BANKRUPTCY. Either party may terminate or suspend this Agreement effective immediately and without liability upon written notice to the other party if any one of the following events occurs: (a) the other party files a voluntary petition in bankruptcy or otherwise seeks protection under any law for the relief of debtors.
-
-9. WARRANTIES.
-
-9.1 NO WARRANTY. EXCEPT AS EXPRESSLY PROVIDED IN THIS AGREEMENT, 2THEMART AND I-ESCROW MAKE NO REPRESENTATIONS OR WARRANTIES OF ANY KIND WHATSOEVER, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NONINFRINGEMENT, OR ARISING FROM COURSE OF DEALING, USAGE OF TRADE, OR OTHERWISE.
-
-9.2 INDEMNIFICATION. 2THEMART AND I-ESCROW SHALL INDEMNIFY AND HOLD HARMLESS EACH OTHER AND THEIR RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, SUPPLIERS AND AFFILIATES FROM ANY CLAIMS, DAMAGES, LOSSES, LIABILITIES, COSTS AND EXPENSES (INCLUDING REASONABLE ATTORNEYS' FEES) ARISING OUT OF OR IN CONNECTION WITH: 
-
-(a) ANY BREACH BY THE OTHER PARTY OF THIS AGREEMENT; 
-(b) ANY VIOLATION BY THE OTHER PARTY OF ANY LAW, STATUTE, ORDINANCE, REGULATION, RULE OR GOVERNMENTAL REQUIREMENT; 
-(c) ANY CLAIM THAT THE SERVICES PROVIDED HEREUNDER INFRINGE UPON THE RIGHTS OF ANY THIRD PARTY; 
-(d) ANY CLAIM ARISING FROM THE USE OF THE CO-BRANDED SITE AND/OR THE SERVICES BY THE OTHER PARTY; 
-
-PROVIDED HOWEVER, THAT 2THEMART SHALL HAVE NO LIABILITY TO I-ESCROW FOR ANY CLAIMS, DAMAGES, LOSSES, LIABILITIES, COSTS AND EXPENSES (INCLUDING REASONABLE ATTORNEYS' FEES) ARISING OUT OF OR IN CONNECTION WITH THE FOLLOWING: 
-
-(i) ANY BREACH BY 2THEMART OF THIS AGREEMENT; 
-(ii) ANY VIOLATION BY 2THEMART OF ANY LAW, STATUTE, ORDINANCE, REGULATION, RULE OR GOVERNMENTAL REQUIREMENT; 
-(iii) ANY CLAIM THAT THE SERVICES PROVIDED HEREUNDER INFRINGE UPON THE RIGHTS OF ANY THIRD PARTY; 
-
-PROVIDED FURTHER HOWEVER, THAT I-ESCROW SHALL HAVE NO LIABILITY TO 2THEMART FOR ANY CLAIMS, DAMAGES, LOSSES, LIABILITIES, COSTS AND EXPENSES (INCLUDING REASONABLE ATTORNEYS' FEES) ARISING OUT OF OR IN CONNECTION WITH THE FOLLOWING: 
-
-(i) ANY BREACH BY I-ESCROW OF THIS AGREEMENT; 
-(ii) ANY VIOLATION BY I-ESCROW OF ANY LAW, STATUTE, ORDINANCE, REGULATION, RULE OR GOVERNMENTAL REQUIREMENT; 
-(iii) ANY CLAIM THAT THE SERVICES PROVIDED HEREUNDER INFRINGE UPON THE RIGHTS OF ANY THIRD PARTY.
+EACH PARTY PROVIDES ALL MATERIALS AND SERVICES TO THE OTHER PARTY "AS IS." EACH PARTY DISCLAIMS ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Each party acknowledges that it has not entered into this Agreement in relianc...
 ```
 ---
 

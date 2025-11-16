@@ -190,7 +190,6 @@ Through rigorous testing with 4-5 "problematic" contracts, three pipeline archit
 | **Code 3** | 4-Call Robust | 11-12 min | All tests pass | Best |
 
 
-**Attaching all for reference**
 
 ### Critical Test Cases (Sampled from CUAD Dataset at random)
 

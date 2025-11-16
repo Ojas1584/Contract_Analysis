@@ -15,7 +15,7 @@
 
 ##  Overview
 
-The current project uses a production scale pipeline to analyse legal contracts of CUAD (Contract Understanding Atticus Dataset). It is powered by an LLM (Ollama + llama3.1:8b) and developed Retrieval-Augmented Generation (RAG) solution to provide enterprise-level contract intelligence ~80% average extraction accuracy on key clauses.
+The current project uses a production scale pipeline to analyse legal contracts of CUAD (Contract Understanding Atticus Dataset). It is powered by a LLM (Ollama + llama3.1:8b) and developed Retrieval-Augmented Generation (RAG) solution to provide enterprise-level contract intelligence ~80% average extraction accuracy on key clauses.
 
 ### Core Capabilities
 

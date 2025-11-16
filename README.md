@@ -15,7 +15,7 @@
 
 ##  Overview
 
-The current project uses a production scale pipeline to analyse legal contracts of CUAD (Contract Understanding Atticus Dataset). It is powered by an LLM (Ollama + llama3.1:8b) and developed Retrieval-Augmented Generation (RAG) solution to provide enterprise-level contract intelligence at 90 percent extraction accuracy on key clauses.
+The current project uses a production scale pipeline to analyse legal contracts of CUAD (Contract Understanding Atticus Dataset). It is powered by an LLM (Ollama + llama3.1:8b) and developed Retrieval-Augmented Generation (RAG) solution to provide enterprise-level contract intelligence ~80% average extraction accuracy on key clauses.
 
 ### Core Capabilities
 
@@ -71,7 +71,7 @@ The current project uses a production scale pipeline to analyse legal contracts 
 
 3. **Install dependencies**
    ```bash
-   pip install PyPDF2 langchain-community langchain-ollama faiss-cpu pandas tqdm
+   pip install -r requirements.txt
    ```
 
 4. **Pull required Ollama models**
@@ -148,7 +148,7 @@ python contractsAnalysis.py
 
 **Expected Output:**
 - Processing time: ~6 minutes per contract
-- Total runtime for 50 contracts: ~5.3 hours
+- Total runtime for 50 contracts: ~5 hours
 - Checkpoint saved every 10 contracts
 - Final CSV and JSON exports in `output/` directory
 
@@ -221,7 +221,7 @@ Through rigorous testing with 4-5 "problematic" contracts, three pipeline archit
 ### Final Metrics (50 Contracts)
 
 ```
-Total Runtime:      318.8 minutes (5.3 hours)
+Total Runtime:      318.8 minutes (~5 hours)
 Avg per Contract:   6.4 minutes
 Contracts Failed:   0 (100% completion rate)
 Checkpoints Saved:  5 (every 10 contracts)
@@ -312,7 +312,7 @@ print(df.iloc[0]['summary'])
 
 ### Runtime Analysis
 
-**Full 50-Contract Run: 5.3 hours** 
+**Full 50-Contract Run: ~5 hours** 
 
 ```
 Total Runtime:      318.8 minutes (5 hours 19 minutes)
@@ -347,13 +347,6 @@ The 5-hour runtime delivers:
 
 ---
 
-##  Future Improvements
-
-Some known Edge Cases are:
-
-1. Financial Term Extraction
-
-2. Complex Clause Structures
 
 ##  Sample Output
 

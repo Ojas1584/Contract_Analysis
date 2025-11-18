@@ -55,9 +55,8 @@ def load_checkpoint():
         
         results = checkpoint_data if isinstance(checkpoint_data, list) else checkpoint_data.get('results', checkpoint_data)
         
-        print("\n" + "=" * 80)
         print(" CHECKPOINT FOUND - RESUMING PIPELINE")
-        print("=" * 80)
+        
         print(f"Checkpoint file: {checkpoint_file.name}")
         print(f"Contracts already processed: {len(results)}")
         
@@ -77,9 +76,9 @@ def save_checkpoint(results: List[Dict], index: int):
 
 
 def load_contracts(pdf_dir: str, limit: int = None) -> Tuple[List[Document], Dict[str, str]]:
-    print("=" * 80)
+    
     print("STEP 1: LOADING CONTRACTS")
-    print("=" * 80)
+    
     
     pdf_files = sorted([f for f in os.listdir(pdf_dir) if f.endswith('.pdf')])
     if limit:
@@ -109,9 +108,9 @@ def load_contracts(pdf_dir: str, limit: int = None) -> Tuple[List[Document], Dic
 
 
 def create_vector_store(documents: List[Document]) -> FAISS:
-    print("\n" + "=" * 80)
-    print("STEP 2: CREATING VECTOR STORE (Semantic Search - BONUS)")
-    print("=" * 80)
+    
+    print("STEP 2: CREATING VECTOR STORE (Semantic Search)")
+   
     
     splitter = RecursiveCharacterTextSplitter(chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP)
     chunks = splitter.split_documents(documents)
@@ -468,10 +467,10 @@ CLAUSE_DEFINITIONS = {
 }
 
 def main():
-    print("\n" + "=" * 80)
-    print("LEGAL CONTRACT ANALYSIS - v3 FINAL PIPELINE")
-    print(f"Processing up to {MAX_CONTRACTS} contracts (Full Re-run)")
-    print("=" * 80)
+    
+    print("LEGAL CONTRACT ANALYSIS ")
+    print(f"Processing up to {MAX_CONTRACTS} contracts ")
+    
     
     start_time = datetime.now()
     
@@ -501,15 +500,15 @@ def main():
     
     vector_store = create_vector_store(all_documents)
     
-    print("\n" + "=" * 80)
-    print("INITIALIZING LLM")
-    print("=" * 80)
-    llm = OllamaLLM(model="llama3.1:8b", temperature=0.1, num_predict=3072, top_k=20, top_p=0.9)
-    print("✓ LLM initialized")
     
-    print("\n" + "=" * 80)
-    print("EXTRACTING CLAUSES & SUMMARIES (v3 High-Accuracy Mode)")
-    print("=" * 80)
+    print("INITIALIZING LLM")
+    
+    llm = OllamaLLM(model="llama3.1:8b", temperature=0.1, num_predict=3072, top_k=20, top_p=0.9)
+    print("LLM initialized")
+    
+    
+    print("EXTRACTING CLAUSES & SUMMARIES")
+    
     
     for idx, doc in enumerate(tqdm(documents_to_process, desc="Processing"), 1):
         contract_id = doc.metadata['source']
@@ -549,9 +548,9 @@ def main():
     if results:
         save_checkpoint(results, len(results))
 
-    print("\n" + "=" * 80)
+    
     print("EXPORTING RESULTS")
-    print("=" * 80)
+    
     
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     csv_file = Path(OUTPUT_DIR) / f"contract_analysis_{timestamp}.csv"
@@ -572,9 +571,9 @@ def main():
     
     duration = (datetime.now() - start_time).total_seconds()
     
-    print("\n" + "=" * 80)
+    
     print("COMPLETED")
-    print("=" * 80)
+   
     
     total_processed = len(results)
     avg_time = (duration / len(documents_to_process)) if documents_to_process else 0 
@@ -596,7 +595,7 @@ def main():
         print(f"  Liability: {liab_success}/{total_processed} ({liab_success/total_processed*100:.1f}%)")
     else:
         print("  No results to calculate rates.")
-    print("=" * 80)
+    
     
     return results
 
